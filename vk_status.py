@@ -37,7 +37,7 @@ def status_change(vk):
     v_day = version[3:]
     # Проверка, високосный ли год >
     current_year = time.strftime('%Y')
-    if (current_year % 4 == 0) and (current_year % 100 != 0) or (current_year % 400 == 0):
+    if (int(current_year) % 4 == 0) and (int(current_year) % 100 != 0) or (int(current_year) % 400 == 0):
         amount = '366'
     else:
         amount = '365'
